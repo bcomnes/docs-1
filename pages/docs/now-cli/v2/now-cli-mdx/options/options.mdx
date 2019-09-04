@@ -1,25 +1,96 @@
 import HR from '~/components/text/hr'
+import Snippet from '~/components/snippet'
+import Caption from '~/components/text/caption'
+import { InlineCode } from '~/components/text/code'
 
 export const meta = {
   editUrl: 'pages/docs/now-cli/v2/now-cli-mdx/options/options.mdx',
-  lastEdited: '2019-09-03T23:06:27.000Z'
+  lastEdited: '2019-09-04T10:37:00.000Z'
 }
 
 # Options
 
-This section contains a list of the available options you can pass when using [Now CLI](/download) commands. To understand which options can be used with a particular command, take a look at the specific command for greater detail.
+This section contains information about the two types of options available to pass when using [Now CLI](/download) commands, [unique](#unique-options) and [global](#global-options).
 
-## Available Options
+To understand which options can be used with a particular command, take a look at the specific command for more information.
 
-The following options are available to use with Now CLI commands, the shorthand version (case sensitive) is also noted where applicable:
+## Unique Options
 
-- `--debug` (`-d`)
-- `--force` (`-f`)
-- `--global-config` (`-Q`)
-- `--help` (`-h`)
-- `--local-config` (`-A`)
-- `--no-clipboard` (`-C`)
-- `--scope` (`-S`)
-- `--token` (`-t`)
+Unique options relate only to a single Now CLI command and as such, are documented in full in the command section they relate to.
+
+When using unique options, some of the shorthands may conflict with those of [global options](#global-options), this only occurs when the partiular global option is not available for that command.
+
+## Global Options
+
+Global options are commonly available to use with multiple Now CLI commands.
+
+### Debug
+
+The `--debug` option, shorthand `-d`, can be used to provide a more verbose output when running Now CLI commands.
+
+#### Usage Example
+
+<Snippet dark text="now --debug" />
+<Caption>Using the <InlineCode>now</InlineCode> command with the <InlineCode>--debug</InlineCode> option.</Caption>
+
+### Force
+
+The `--force` option, shorthand `-f`, is used either to force a deployment where there have been no changes or the creation of a directory.
+
+#### Usage Example
+
+<Snippet dark text="now --force" />
+<Caption>Using the <InlineCode>now</InlineCode> command with the <InlineCode>--force</InlineCode> option.</Caption>
+
+<Snippet dark text="now init gatsby my-project-directory --force" />
+<Caption>Using the <InlineCode>now init</InlineCode> command with the <InlineCode>--force</InlineCode> option.</Caption>
+
+### Global Config
+
+The `--global-config` option, shorthand `-Q`, can be used set the path to the global `/.now` directory.
+
+#### Usage Example
+
+<Snippet dark text="now --global-config /path-to/.now" />
+<Caption>Using the <InlineCode>now</InlineCode> command with the <InlineCode>--global-config</InlineCode> option.</Caption>
+
+### Help
+
+The `--help` option, shorthand `-h`, can be used to display more information about [Now CLI](/downlaod) commands.
+
+#### Usage Example
+
+<Snippet dark text="now --help" />
+<Caption>Using the <InlineCode>now</InlineCode> command with the <InlineCode>--help</InlineCode> option.</Caption>
+
+<Snippet dark text="now secrets --help" />
+<Caption>Using the <InlineCode>now secrets</InlineCode> command with the <InlineCode>--help</InlineCode> option.</Caption>
+
+### Local Config
+
+The `--local-config` option, shorthand `-A`, can be used set the path to a local `now.json` file.
+
+#### Usage Example
+
+<Snippet dark text="now --local-config /path-to/now.json" />
+<Caption>Using the <InlineCode>now</InlineCode> command with the <InlineCode>--local-config</InlineCode> option.</Caption>
+
+### Scope
+
+The `--scope` option, shorthand `-S`, can be used to execute [Now CLI](/download) commands from a different team or user account than is currently active.
+
+#### Usage Example
+
+<Snippet dark text="now --scope zeit" />
+<Caption>Using the <InlineCode>now</InlineCode> command with the <InlineCode>--scope</InlineCode> option.</Caption>
+
+### Token
+
+The `--token` option, shorthand `-t`, can be used to execute [Now CLI](/download) commands with an authorization token.
+
+#### Usage Example
+
+<Snippet dark text="now --token zeit" />
+<Caption>Using the <InlineCode>now</InlineCode> command with the <InlineCode>--token</InlineCode> option.</Caption>
 
 <HR />
