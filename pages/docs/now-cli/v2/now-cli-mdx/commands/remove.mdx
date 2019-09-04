@@ -5,12 +5,17 @@ import Note from '~/components/text/note'
 
 export const meta = {
   editUrl: 'pages/docs/now-cli/v2/now-cli-mdx/commands/remove.mdx',
-  lastEdited: '2019-09-04T10:37:00.000Z'
+  lastEdited: '2019-09-04T12:42:35.000Z'
 }
 
 ## Remove
 
 The `now remove` command, which can be shortened to `now rm`, is used to remove deployments either by ID or for a specific project.
+
+<Note type="warning">
+  This command is for <b>advanced use only</b>. Whilst you are unlikely to need
+  to, we recommend using the ZEIT dashboard to remove deployments.
+</Note>
 
 ### Basic Usage
 
@@ -25,7 +30,7 @@ The `now remove` command, which can be shortened to `now rm`, is used to remove 
 <Snippet dark text="now remove [project-name]" />
 <Caption>Using the <InlineCode>now remove</InlineCode> command to remove all deployments for a project from the ZEIT Now platform.</Caption>
 
-<Note warning>
+<Note type="warning">
   By using the project name, the entire project will be removed from the account
   unless the <InlineCode>--safe</InlineCode> is used.
 </Note>
