@@ -271,7 +271,8 @@ class Header extends Component {
                       active={
                         router.pathname.startsWith('/docs') &&
                         !router.pathname.startsWith('/docs/api') &&
-                        !router.pathname.startsWith('/docs/integrations')
+                        !router.pathname.startsWith('/docs/integrations') &&
+                        !router.pathname.startsWith('/docs/now-cli')
                       }
                       onClick={handleIndexClick}
                     >
@@ -289,7 +290,8 @@ class Header extends Component {
                       className={cn('developer-dropdown desktop-only', {
                         active:
                           router.pathname.startsWith('/docs/api') ||
-                          router.pathname.startsWith('/docs/integrations')
+                          router.pathname.startsWith('/docs/integrations') ||
+                          router.pathname.startsWith('/docs/now-cli')
                       })}
                     >
                       <MenuPopOver
