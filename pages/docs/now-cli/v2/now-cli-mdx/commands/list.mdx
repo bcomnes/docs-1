@@ -24,9 +24,9 @@ The `now list` command, which can be shortened to `now ls`, is used to provide a
 <Snippet dark text="now list [project-name] [--meta foo=bar]" />
 <Caption>Using the <InlineCode>now list</InlineCode> command to retrieve information about deployments filtered by metadata.</Caption>
 
-### Options
+### Global Options
 
-The following options can be passed when using the `now inspect` command:
+The following [global options](#options) can be passed when using the `now list` command:
 
 - `--debug`
 - `--global-config`
@@ -35,10 +35,17 @@ The following options can be passed when using the `now inspect` command:
 - `--scope`
 - `--token`
 
+For more information on global options and their usage, refer to the [options section](#options).
+
 ### Unique Options
 
 These are options that only apply to the `now list` command, therefore, more information is provided.
 
-- `--meta` - filters the project based on attached metadata
+#### Listen
 
-For more information on options and their usage, refer to the [options section](#options).
+The `--meta` option, shorthand `-m`, can be used to filter results based on project metadata.
+
+##### Usage Example
+
+<Snippet dark text="now list --meta key1=value1 key2=value2" />
+<Caption>Using the <InlineCode>now list</InlineCode> command with the <InlineCode>--meta</InlineCode> option.</Caption>

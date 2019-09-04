@@ -30,9 +30,9 @@ The `now remove` command, which can be shortened to `now rm`, is used to remove 
   unless the <InlineCode>--safe</InlineCode> is used.
 </Note>
 
-### Options
+### Global Options
 
-The following options can be passed when using the `now remove` command:
+The following [global options](#options) can be passed when using the `now remove` command:
 
 - `--debug`
 - `--global-config`
@@ -41,11 +41,26 @@ The following options can be passed when using the `now remove` command:
 - `--scope`
 - `--token`
 
+For more information on global options and their usage, refer to the [options section](#options).
+
 ### Unique Options
 
 These are options that only apply to the `now remove` command, therefore, more information is provided.
 
-- `--safe` - skip deployments with an active alias
-- `--yes` - allows the skipping of confirmation
+#### Safe
 
-For more information on options and their usage, refer to the [options section](#options).
+The `--safe` option, shorthand `-s`, can be used to skip the removal of deployments with an active alias when a project is provided as the parameter.
+
+##### Usage Example
+
+<Snippet dark text="now remove my-project --safe" />
+<Caption>Using the <InlineCode>now remove</InlineCode> command with the <InlineCode>--safe</InlineCode> option.</Caption>
+
+#### Yes
+
+The `--yes` option, shorthand `-y`, can be used to skip the confirmation step for a deployment or project removal.
+
+##### Usage Example
+
+<Snippet dark text="now remove my-deployment.com --yes" />
+<Caption>Using the <InlineCode>now remove</InlineCode> command with the <InlineCode>--yes</InlineCode> option.</Caption>

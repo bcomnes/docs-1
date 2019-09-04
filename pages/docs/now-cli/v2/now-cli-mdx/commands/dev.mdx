@@ -16,17 +16,24 @@ The `now dev` command is used to replicate the ZEIT Now deployment environment l
 <Snippet dark text="now dev" />
 <Caption>Using the <InlineCode>now dev</InlineCode> command from the root of a project directory.</Caption>
 
-### Options
+### Global Options
 
-The following options can be passed when using the `now dev` command:
+The following [global options](#options) can be passed when using the `now dev` command:
 
 - `--debug`
 - `--help`
+
+For more information on global options and their usage, refer to the [options section](#options).
 
 ### Unique Options
 
 These are options that only apply to the `now dev` command, therefore, more information is provided.
 
-- `--listen` - specifies a port for `now dev` to run on
+#### Listen
 
-For more information on options and their usage, refer to the [options section](#options).
+The `--listen` option, shorthand `-l`, can be used to specify which port `now dev` runs on.
+
+##### Usage Example
+
+<Snippet dark text="now dev --listen 5005" />
+<Caption>Using the <InlineCode>now dev</InlineCode> command with the <InlineCode>--listen</InlineCode> option.</Caption>

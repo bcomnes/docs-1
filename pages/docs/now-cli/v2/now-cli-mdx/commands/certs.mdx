@@ -30,9 +30,9 @@ The `now certs` command is used to manage certificates for domains, providing fu
 <Snippet dark text="now certs rm [certificate-id]" />
 <Caption>Using the <InlineCode>now certs</InlineCode> command to remove a certificate by ID.</Caption>
 
-### Options
+### Global Options
 
-The following options can be passed when using the `now certs` command:
+The following [global options](#options) can be passed when using the `now certs` command:
 
 - `--debug`
 - `--force`
@@ -42,13 +42,53 @@ The following options can be passed when using the `now certs` command:
 - `--scope`
 - `--token`
 
+For more information on global options and their usage, refer to the [options section](#options).
+
 ### Unique Options
 
 These are options that only apply to the `now certs` command, therefore, more information is provided.
 
-- `--challenge-only` - only show the challenges needed to issue a certificate
-- `--crt [file-path]` - upload a certificate file for the domain
-- `--key [key-path]` - upload a certificate key file for the domain
-- `--ca [ca-path]` - upload a CA certificate chain file for the domain
+#### Challenge Only
 
-For more information on options and their usage, refer to the [options section](#options).
+The `--challenge-only` option can be used to only show the challenges needed to issue a certificate.
+
+##### Usage Example
+
+<Snippet dark text="now certs issue foo.com --challenge-only" />
+<Caption>Using the <InlineCode>now certs</InlineCode> command with the <InlineCode>--challenge-only</InlineCode> option.</Caption>
+
+#### Challenge Only
+
+The `--challenge-only` option can be used to only show the challenges needed to issue a certificate.
+
+##### Usage Example
+
+<Snippet dark text="now certs issue foo.com --challenge-only" />
+<Caption>Using the <InlineCode>now certs</InlineCode> command with the <InlineCode>--challenge-only</InlineCode> option.</Caption>
+
+#### CRT
+
+The `--crt` option can be used to upload a certificate file for a domain by providing a path to it.
+
+##### Usage Example
+
+<Snippet dark text="now certs issue foo.com --crt foo.crt" />
+<Caption>Using the <InlineCode>now certs</InlineCode> command with the <InlineCode>--crt</InlineCode> option.</Caption>
+
+#### Key
+
+The `--key` option can be used to upload a certificate key file for a domain by providing a path to it.
+
+##### Usage Example
+
+<Snippet dark text="now certs issue foo.com --key foo.pem" />
+<Caption>Using the <InlineCode>now certs</InlineCode> command with the <InlineCode>--key</InlineCode> option.</Caption>
+
+#### CA
+
+The `--ca` option can be used to upload a certificate chain file for a domain by providing a path to it.
+
+##### Usage Example
+
+<Snippet dark text="now certs issue foo.com --ca foo.ca" />
+<Caption>Using the <InlineCode>now certs</InlineCode> command with the <InlineCode>--ca</InlineCode> option.</Caption>
