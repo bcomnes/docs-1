@@ -387,7 +387,8 @@ class Header extends Component {
                   active={
                     router.pathname.startsWith('/docs') &&
                     !router.pathname.startsWith('/docs/api') &&
-                    !router.pathname.startsWith('/docs/integrations')
+                    !router.pathname.startsWith('/docs/integrations') &&
+                    !router.pathname.startsWith('/docs/now-cli')
                   }
                   onClick={handleIndexClick}
                 >
@@ -395,7 +396,8 @@ class Header extends Component {
                 </NavigationItem>
                 {router.pathname.startsWith('/docs') &&
                   !router.pathname.startsWith('/docs/api') &&
-                  !router.pathname.startsWith('/docs/integrations') && (
+                  !router.pathname.startsWith('/docs/integrations') &&
+                  !router.pathname.startsWith('/docs/now-cli') && (
                     <div className="navigation">
                       <DocsNavbarDesktop
                         data={data}
